@@ -1,0 +1,214 @@
+body {
+  background-color: #282c34;
+}
+
+.App {
+  text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.App-header {
+  background-color: #181717;
+  height: 10vh;
+  min-height: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  max-width: 728px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(40, 37, 53);
+}
+
+main {
+  padding: 10px;
+  /* height: 90vh; */
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+form {
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(24, 23, 23);
+  width: 100%;
+  max-width: 728px;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: rgb(58, 58, 58);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
+
+button {
+  background-color: #282c34; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.send-button {
+  width:fit-content;
+  background-color: #38388f;
+  transition: all ease-in-out 250ms;
+}
+
+.send-button:hover {
+  background-color: #38388faa;
+}
+
+
+.sign-in {
+  color: #282c34;
+  background: white;
+  max-width: 280px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.sign-out {
+  color: white!important;
+  z-index: 100;
+  cursor: pointer;
+  height: 100%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.sign-out:hover {
+  background-color: #282c34aa;
+}
+
+
+ul, li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p,
+.sent .messageTime  {
+  color: white;
+  background: #0b93f6;
+  align-self: flex-end;
+}
+.received p,
+.received .messageTime {
+  background: #e5e5ea;
+  color: black;
+  align-self: flex-start;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messageTime {
+  font-size: 0.75rem;
+  color: #FAFAFA!important;
+  background-color: transparent!important;
+  width: fit-content!important;
+  padding: 0.1rem 0.2rem !important;
+  margin: 0!important;
+}
+
+.main-header {
+margin: 0;
+padding: 0 0.5rem;
+font-size: 1.5rem;
+display: flex;
+align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+  .main-header{
+    font-size: 2.5rem;
+  }
+  .send-button{
+    width: auto;
+    /* padding: ; */
+  }
+}
