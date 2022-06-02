@@ -7,6 +7,10 @@ export function notifyMe({ from = 'user', text = '', uid, currentUId }: INotifyP
     return;
   }
 
+  if (!window) {
+    return;
+  }
+
   const title = `Message from ${from}`;
   // Let's check if the browser supports notifications
   if (!('Notification' in window)) {

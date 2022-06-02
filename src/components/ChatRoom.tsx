@@ -23,7 +23,7 @@ export const ChatRoom = ({ app }: IProps) => {
   const auth = getAuth(app);
   const oldMessages = useRef<DocumentData[]>(); 
   const messageRef = collection(db, 'messages');
-  const q = query(messageRef, orderBy('createdAt', "asc"), limit(25));
+  const q = query(messageRef, orderBy('createdAt'), limit(25));
 
   const [messages] = useCollectionData(q, idObj);
   const [formValue, setFormValue] = useState('');
@@ -38,6 +38,11 @@ export const ChatRoom = ({ app }: IProps) => {
     }
     oldMessages.current = messages!;
   }, [messages, auth.currentUser?.uid])
+
+
+//  if(Array.isArray(messages)) {
+//    console.log('messages!.slice(-1)?.[0]: ', messages!.slice(-1)?.[0]?.text);
+//  }
 
   const sendMessage = async (e: React.SyntheticEvent<EventTarget>) => {
     e.preventDefault();
