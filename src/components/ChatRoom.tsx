@@ -38,7 +38,6 @@ export const ChatRoom = ({ app }: IProps) => {
     }
     oldMessages.current = messages!;
   }, [messages, auth.currentUser?.uid])
- 
 
   const sendMessage = async (e: React.SyntheticEvent<EventTarget>) => {
     e.preventDefault();

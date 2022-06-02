@@ -17,6 +17,8 @@ export function notifyMe({ from = 'user', text = '', uid, currentUId }: INotifyP
   else if (Notification?.permission === 'granted') {
     // If it's okay let's create a notification
     const notification = new Notification(title, { body: text, icon: iconUrl });
+    if (notification) {
+    }
   }
 
   // Otherwise, we need to ask the user for permission
@@ -25,6 +27,8 @@ export function notifyMe({ from = 'user', text = '', uid, currentUId }: INotifyP
       // If the user accepts, let's create a notification
       if (permission === 'granted') {
         const notification = new Notification(title, { body: text, icon: iconUrl });
+        if (notification) {
+        }
       }
     });
   }
